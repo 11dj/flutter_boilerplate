@@ -1,10 +1,10 @@
 
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import './../../core/models/counter.dart';
-import './../../core/models/user.dart';
+import 'package:flutter_boilerplate/core/models/counter.dart';
+import 'package:flutter_boilerplate/core/models/user.dart';
 
-class HomeView extends StatelessWidget {
+class CounterView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {

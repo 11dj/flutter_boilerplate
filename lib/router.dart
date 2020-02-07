@@ -2,18 +2,21 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
 
-import './ui/views/home_view.dart';
-import './ui/views/first_view.dart';
-import './ui/views/no_found_view.dart';
+import 'package:flutter_boilerplate/ui/views/first_view.dart';
+import 'package:flutter_boilerplate/ui/views/counter_view.dart';
+import 'package:flutter_boilerplate/ui/views/user_view.dart';
+import 'package:flutter_boilerplate/ui/views/no_found_view.dart';
 
 
 class Router {
   static Route<dynamic> generateRoute(RouteSettings settings) {
     switch (settings.name) {
-      case 'counter':
-        return MaterialPageRoute(builder: (_) => HomeView());
       case '/':
         return MaterialPageRoute(builder: (_) => FirstView(title: 'Home Page'));
+      case 'counter':
+        return MaterialPageRoute(builder: (_) => CounterView());
+      case 'user':
+        return MaterialPageRoute(builder: (_) => UserView());
       // case RoutePaths.Post:
       //   var post = settings.arguments as Post;
       //   return MaterialPageRoute(builder: (_) => PostView(post: post));

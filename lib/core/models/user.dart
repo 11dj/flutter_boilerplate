@@ -4,7 +4,7 @@ class User with ChangeNotifier {
   String name = 'YYYY';
 
   void update(String nv) {
-    name = name + nv;
+    name = nv;
     notifyListeners();
   }
 }

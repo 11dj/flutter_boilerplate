@@ -11,7 +11,6 @@ class FirstView extends StatefulWidget {
 }
 
 class _FirstViewState extends State<FirstView> {
-
   @override 
   Widget build(BuildContext context) {
     return  Scaffold(
@@ -29,9 +28,9 @@ class _FirstViewState extends State<FirstView> {
             ),
             const SizedBox(height: 30),
             RaisedButton(
-              onPressed: () {},
+              onPressed: () => Navigator.pushNamed(context, 'user'),
               child: const Text(
-                'Enabled Button',
+                'User name',
                 style: TextStyle(fontSize: 20)
               ),
             ),
