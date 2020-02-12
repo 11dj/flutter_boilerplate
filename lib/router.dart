@@ -6,6 +6,7 @@ import 'package:flutter_boilerplate/ui/views/first_view.dart';
 import 'package:flutter_boilerplate/ui/views/counter_view.dart';
 import 'package:flutter_boilerplate/ui/views/user_view.dart';
 import 'package:flutter_boilerplate/ui/views/no_found_view.dart';
+import 'package:flutter_boilerplate/ui/views/layout_view.dart';
 
 
 class Router {
@@ -17,6 +18,8 @@ class Router {
         return MaterialPageRoute(builder: (_) => CounterView());
       case 'user':
         return MaterialPageRoute(builder: (_) => UserView());
+      case 'layout':
+        return MaterialPageRoute(builder: (_) => LayoutView());
       // case RoutePaths.Post:
       //   var post = settings.arguments as Post;
       //   return MaterialPageRoute(builder: (_) => PostView(post: post));

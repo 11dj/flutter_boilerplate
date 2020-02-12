@@ -11,6 +11,7 @@ class UserView extends StatefulWidget {
 
 class _UserViewState extends State<UserView> {
   final TextEditingController myController = TextEditingController();
+  String name;
 
   @override
   void initState() {
@@ -30,6 +31,9 @@ class _UserViewState extends State<UserView> {
   _printLatestValue() {
     print("Second text field: ${myController.text}");
     // Provider.of<User>(context).update(myController.text);
+    setState(() {
+      name = myController.text;
+    });
   }
 
   @override
@@ -38,26 +42,6 @@ class _UserViewState extends State<UserView> {
 
     return Scaffold(
       appBar: AppBar(title: Text('User name')),
-      // body: Center(
-      //   child: Column(
-      //     mainAxisAlignment: MainAxisAlignment.center,
-      //     children: <Widget>[
-      //       Text(
-      //         'Your name is:',
-      //         style: Theme.of(context).textTheme.display1
-      //       ),
-      //       Consumer<User>(
-      //         builder: (context, user, child) => Text(
-      //           '${user.name}',
-      //           style: Theme.of(context).textTheme.display1,
-      //         ),
-      //       ),
-      //       TextField(
-      //         controller: myController,
-      //       ),
-      //     ],
-      //   ),
-      // ),
       body: Consumer<User>(
         builder: (context, user, child) {
           return Center(
@@ -70,7 +54,7 @@ class _UserViewState extends State<UserView> {
                 ),
                 TextField(
                   controller: myController,
-                  onChanged: (value) => userProv.update(value)
+                  // onChanged: (value) => userProv.update(value)
                 ),
               ],
             )
@@ -79,7 +63,7 @@ class _UserViewState extends State<UserView> {
       ),
       floatingActionButton: FloatingActionButton(
         // onPressed: () => counter.increment(),
-        onPressed: () => userProv.update('ul'),
+        onPressed: () => userProv.update(name),
         tooltip: 'Increment',
         child: Icon(Icons.add),
       ),

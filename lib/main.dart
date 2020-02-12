@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
     return MultiProvider(
       providers: providers,
       child: MaterialApp(
-        title: 'FlashAir Uploader',
+        title: 'Flutter Boilerplate',
         theme: ThemeData(),
         initialRoute: '/',
         onGenerateRoute: Router.generateRoute,
