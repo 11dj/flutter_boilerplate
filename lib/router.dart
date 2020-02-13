@@ -7,9 +7,14 @@ import 'package:flutter_boilerplate/ui/views/counter_view.dart';
 import 'package:flutter_boilerplate/ui/views/user_view.dart';
 import 'package:flutter_boilerplate/ui/views/no_found_view.dart';
 import 'package:flutter_boilerplate/ui/views/layout_view.dart';
+import 'package:flutter_boilerplate/ui/views/login_view.dart';
+import 'package:flutter_boilerplate/ui/views/main_view.dart';
+
 
 
 class Router {
+  static initial () => 'login';
+
   static Route<dynamic> generateRoute(RouteSettings settings) {
     switch (settings.name) {
       case '/':
@@ -20,6 +25,10 @@ class Router {
         return MaterialPageRoute(builder: (_) => UserView());
       case 'layout':
         return MaterialPageRoute(builder: (_) => LayoutView());
+      case 'login':
+        return MaterialPageRoute(builder: (_) => LoginView());
+      case 'main':
+        return MaterialPageRoute(builder: (_) => MainView());
       // case RoutePaths.Post:
       //   var post = settings.arguments as Post;
       //   return MaterialPageRoute(builder: (_) => PostView(post: post));
