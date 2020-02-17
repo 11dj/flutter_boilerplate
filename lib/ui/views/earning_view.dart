@@ -1,18 +1,18 @@
 import 'package:flutter/material.dart';
 import 'dart:math';
 
-class HomeView extends StatefulWidget {
+class EarningView extends StatefulWidget {
 
   @override 
-  _HomeViewState createState() => _HomeViewState();
+  _EarningViewState createState() => _EarningViewState();
 }
 
-class _HomeViewState extends State<HomeView> {
+class _EarningViewState extends State<EarningView> {
 
   var listAct = [
-    { "icon": Icons.attach_money, "val": 40, "opt": "+", "name": "Your photo get paid" },
-    { "icon": Icons.photo, "val": 1, "opt": "-", "name": "Uploaded photo" },
-    { "icon": Icons.photo, "val": 150, "opt": "+", "name": "get credit after sold" },
+    { "icon": Icons.attach_money, "val": 40, "opt": "+", "name": "Your photo get paid(S)" },
+    { "icon": Icons.attach_money, "val": 80, "opt": "+", "name": "Your photo get paid(M)" },
+    { "icon": Icons.attach_money, "val": 120, "opt": "+", "name": "Your photo get paid(L)" },
   ];
 
 
@@ -44,7 +44,7 @@ class _HomeViewState extends State<HomeView> {
               child: Row(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
-                Text('Summary', style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold, color: Colors.white),)
+                Text('Earnings', style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold, color: Colors.white),)
               ]),
           ),
           Container(
@@ -60,29 +60,6 @@ class _HomeViewState extends State<HomeView> {
                     margin: EdgeInsets.all(5.0),
                     padding: EdgeInsets.all(10.0),
                     decoration: BoxDecoration(
-                      color: Colors.blue,
-                      shape: BoxShape.rectangle,
-                      borderRadius: BorderRadius.all(Radius.circular(20.0)), 
-                    ),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.stretch,
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: <Widget>[
-                        Text('Credit', style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold, color: Colors.white)),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.end,
-                          children: <Widget>[
-                            Text('91,806', style: TextStyle(fontSize: 36, fontWeight: FontWeight.bold, color: Colors.white)),
-                          ],)
-                    ],),
-                  ),
-                ),
-                Flexible(
-                  flex: 1,
-                  child: Container(
-                    margin: EdgeInsets.all(5.0),
-                    padding: EdgeInsets.all(10.0),
-                    decoration: BoxDecoration(
                       color: Colors.orange,
                       shape: BoxShape.rectangle,
                       borderRadius: BorderRadius.all(Radius.circular(20.0)), 
@@ -91,7 +68,13 @@ class _HomeViewState extends State<HomeView> {
                       crossAxisAlignment: CrossAxisAlignment.stretch,
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: <Widget>[
-                        Text('Earning', style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold, color: Colors.white)),
+                        // Text('Earning', style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold, color: Colors.white)),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: <Widget>[
+                           Text('Earning', style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold, color: Colors.white)),
+                           Text('Withdrals', style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: Colors.white)),
+                        ],),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.end,
                           children: <Widget>[
@@ -135,7 +118,7 @@ class _HomeViewState extends State<HomeView> {
                             trailing: Container(
                               height: 40,
                               width: 60,
-                              decoration: BoxDecoration(color: listAct[rg]['opt'] == '+' ? Colors.green : Colors.red),
+                              // decoration: BoxDecoration(color: listAct[rg]['opt'] == '+' ? Colors.green : Colors.red),
                               child: Center(child:Text('${listAct[rg]['opt']}${listAct[rg]['val']}', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold, color: Colors.white),))
                             ),
                           )
