@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
       child: MaterialApp(
         title: 'Flutter Boilerplate',
         theme: ThemeData(),
-        initialRoute: '/',
+        initialRoute: Router.initial(),
         onGenerateRoute: Router.generateRoute,
       )
     );
