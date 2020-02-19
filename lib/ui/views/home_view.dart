@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'styles/colors.dart' as colorK;
 import 'dart:math';
 
 class HomeView extends StatefulWidget {
@@ -21,7 +22,7 @@ class _HomeViewState extends State<HomeView> {
   @override 
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: colorK.MyColors.black[900],
       body: Container(
         margin: EdgeInsets.fromLTRB(0.0, 40.0, 0.0, 0.0),
         child: Column(
@@ -40,7 +41,6 @@ class _HomeViewState extends State<HomeView> {
           Container(
               height: 40,
               padding: EdgeInsets.only(left: 10.0),
-              decoration: BoxDecoration(color: Colors.black87),
               child: Row(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
@@ -50,7 +50,6 @@ class _HomeViewState extends State<HomeView> {
           Container(
               height: 150,
               padding: EdgeInsets.symmetric(horizontal: 5, vertical: 10),
-              decoration: BoxDecoration(color: Colors.black87),
               child: Row(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
@@ -105,7 +104,6 @@ class _HomeViewState extends State<HomeView> {
           Container(
               height: 40,
               padding: EdgeInsets.only(left: 10.0),
-              decoration: BoxDecoration(color: Colors.black87),
               child: Row(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
@@ -118,7 +116,6 @@ class _HomeViewState extends State<HomeView> {
               removeTop: true,
               child: Container(
                 margin: EdgeInsets.fromLTRB(0, 0, 0, 0),
-                decoration: BoxDecoration(color: Colors.black),
                 child: ListView.separated(
                   separatorBuilder: (context, index) => Divider(color: Colors.grey),
                   itemCount: 20,

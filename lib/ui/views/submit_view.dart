@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'styles/colors.dart' as colorK;
 
 class SubmitView extends StatefulWidget {
 
@@ -14,7 +15,7 @@ class _SubmitViewState extends State<SubmitView> {
   @override 
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.blue,
+      backgroundColor: colorK.MyColors.black[900],
       body: Container(
         margin: EdgeInsets.fromLTRB(0.0, 40.0, 0.0, 0.0),
         // child: Text('Home', style: TextStyle(fontSize: 40, fontWeight: FontWeight.bold, color: Colors.white),),

@@ -1,8 +1,12 @@
 import 'package:flutter/material.dart';
+import 'styles/colors.dart' as colorK;
 
 import 'package:flutter_boilerplate/ui/views/earning_view.dart';
 import 'package:flutter_boilerplate/ui/views/home_view.dart';
 import 'package:flutter_boilerplate/ui/views/upload_view.dart';
+import 'package:flutter_boilerplate/ui/views/no_found_view.dart';
+
+import 'no_found_view.dart';
 
 class MainView extends StatefulWidget {
 
@@ -10,14 +14,15 @@ class MainView extends StatefulWidget {
   _MainViewState createState() => _MainViewState();
 }
 
-class _MainViewState extends State<MainView> {
+class _MainViewState extends State<MainView> with WidgetsBindingObserver {
   int _currentIndex = 0;
   final List<Widget> _children = [
     HomeView(),
     EarningView(),
     UploadView(),
-    UploadView(),
+    NotFoundView(),
   ];
+
 
   void onTabTapped(int index) {
    setState(() {
@@ -30,7 +35,8 @@ class _MainViewState extends State<MainView> {
     return Theme(
             data: Theme.of(context).copyWith(
               // canvasColor: Color(0xFF121212),
-              canvasColor: Colors.black,
+              // canvasColor: Color.fromRGBO(12, 12, 12, 1),
+              canvasColor: colorK.MyColors.black[900],
               // primaryColor: Colors.white,
               textTheme: Theme.of(context).textTheme.copyWith(
                 caption: TextStyle(color: Colors.white)
@@ -52,11 +58,11 @@ class _MainViewState extends State<MainView> {
                   ),
                   BottomNavigationBarItem(
                     icon: Icon(Icons.monetization_on),
-                    title: Text('sss'),
+                    title: Text('Account'),
                   ),
                   BottomNavigationBarItem(
                     icon: Icon(Icons.file_upload),
-                    title: Text('Upload'),
+                    title: Text('Submit'),
                   ),
                   BottomNavigationBarItem(
                     icon: Icon(Icons.person),

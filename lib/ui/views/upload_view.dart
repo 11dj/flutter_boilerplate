@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'styles/colors.dart' as colorK;
 import 'dart:math';
 
 class UploadView extends StatefulWidget {
@@ -28,7 +29,7 @@ class _UploadViewState extends State<UploadView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: colorK.MyColors.black[900],
       body: Container(
         margin: EdgeInsets.fromLTRB(0.0, 40.0, 0.0, 0.0),
         child: Column(
@@ -56,7 +57,6 @@ class _UploadViewState extends State<UploadView> {
             Container(
               height: 40,
               padding: EdgeInsets.only(left: 10.0),
-              decoration: BoxDecoration(color: Colors.black87),
               child: Row(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
@@ -72,7 +72,6 @@ class _UploadViewState extends State<UploadView> {
             Container(
               height: 110,
               padding: EdgeInsets.symmetric(horizontal: 5, vertical: 10),
-              decoration: BoxDecoration(color: Colors.black87),
               child: Row(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
@@ -82,7 +81,7 @@ class _UploadViewState extends State<UploadView> {
                           margin: EdgeInsets.all(5.0),
                           padding: EdgeInsets.all(10.0),
                           decoration: BoxDecoration(
-                            color: Colors.white10,
+                            color: colorK.MyColors.black[800],
                             shape: BoxShape.rectangle,
                             borderRadius:
                                 BorderRadius.all(Radius.circular(20.0)),
@@ -131,7 +130,6 @@ class _UploadViewState extends State<UploadView> {
             Container(
               height: 80,
               padding: EdgeInsets.symmetric(horizontal: 5, vertical: 10),
-              decoration: BoxDecoration(color: Colors.black87),
               child: Row(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
@@ -141,7 +139,7 @@ class _UploadViewState extends State<UploadView> {
                           margin: EdgeInsets.all(5.0),
                           padding: EdgeInsets.all(10.0),
                           decoration: BoxDecoration(
-                            color: Colors.white10,
+                            color: colorK.MyColors.black[800],
                             shape: BoxShape.rectangle,
                             borderRadius:
                                 BorderRadius.all(Radius.circular(20.0)),
@@ -175,7 +173,6 @@ class _UploadViewState extends State<UploadView> {
             Container(
               height: 80,
               padding: EdgeInsets.symmetric(horizontal: 5, vertical: 10),
-              decoration: BoxDecoration(color: Colors.black87),
               child: Row(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
@@ -185,7 +182,7 @@ class _UploadViewState extends State<UploadView> {
                           margin: EdgeInsets.all(5.0),
                           // padding: EdgeInsets.all(10.0),
                           decoration: BoxDecoration(
-                            color: Colors.white10,
+                            color: colorK.MyColors.black[800],
                             shape: BoxShape.rectangle,
                           ),
                           child: Row(
@@ -195,7 +192,7 @@ class _UploadViewState extends State<UploadView> {
                                   Expanded(
                                     flex: 1,
                                     child: Container(
-                                    decoration: BoxDecoration(color: Colors.white10, shape: BoxShape.rectangle, ),
+                                    decoration: BoxDecoration(color: colorK.MyColors.black[800], shape: BoxShape.rectangle, ),
                                     child: Center(
                                       heightFactor: 1.6,
                                       child: Text('Preparing',
@@ -206,7 +203,7 @@ class _UploadViewState extends State<UploadView> {
                                   Expanded(
                                     flex: 1,
                                     child: Container(
-                                    decoration: BoxDecoration(color: Colors.white10, shape: BoxShape.rectangle, ),
+                                    decoration: BoxDecoration(color: colorK.MyColors.black[800], shape: BoxShape.rectangle, ),
                                     child: Center(
                                       heightFactor: 1.6,
                                       child: Text('Pending',
@@ -217,7 +214,7 @@ class _UploadViewState extends State<UploadView> {
                                   Expanded(
                                     flex: 1,
                                     child: Container(
-                                    decoration: BoxDecoration(color: Colors.grey, shape: BoxShape.rectangle, ),
+                                    decoration: BoxDecoration(color: colorK.MyColors.black[700], shape: BoxShape.rectangle, ),
                                     child: Center(
                                       heightFactor: 1.6,
                                       child: Text('Uploaded',
@@ -225,8 +222,6 @@ class _UploadViewState extends State<UploadView> {
                                       ),) ,
                                     ),
                                   ),
-
-
                                 ],
                               )
                             ),
@@ -239,7 +234,6 @@ class _UploadViewState extends State<UploadView> {
                 removeTop: true,
                 child: Container(
                   margin: EdgeInsets.fromLTRB(0, 0, 0, 0),
-                  decoration: BoxDecoration(color: Colors.black),
                   child: ListView.separated(
                     separatorBuilder: (context, index) => Divider(color: Colors.grey),
                     itemCount: 3,

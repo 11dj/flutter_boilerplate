@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'styles/colors.dart' as colorK;
 import 'dart:math';
 
 class EarningView extends StatefulWidget {
@@ -21,7 +22,7 @@ class _EarningViewState extends State<EarningView> {
   @override 
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: colorK.MyColors.black[900],
       body: Container(
         margin: EdgeInsets.fromLTRB(0.0, 40.0, 0.0, 0.0),
         child: Column(
@@ -40,7 +41,6 @@ class _EarningViewState extends State<EarningView> {
           Container(
               height: 40,
               padding: EdgeInsets.only(left: 10.0),
-              decoration: BoxDecoration(color: Colors.black87),
               child: Row(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
@@ -50,7 +50,6 @@ class _EarningViewState extends State<EarningView> {
           Container(
               height: 150,
               padding: EdgeInsets.symmetric(horizontal: 5, vertical: 10),
-              decoration: BoxDecoration(color: Colors.black87),
               child: Row(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
@@ -72,8 +71,8 @@ class _EarningViewState extends State<EarningView> {
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: <Widget>[
-                           Text('Earning', style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold, color: Colors.white)),
-                           Text('Withdrals', style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: Colors.white)),
+                           Text('Your balance', style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold, color: Colors.white)),
+                           Text('withdraw', style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: Colors.white)),
                         ],),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.end,
@@ -88,7 +87,6 @@ class _EarningViewState extends State<EarningView> {
           Container(
               height: 40,
               padding: EdgeInsets.only(left: 10.0),
-              decoration: BoxDecoration(color: Colors.black87),
               child: Row(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
@@ -101,7 +99,6 @@ class _EarningViewState extends State<EarningView> {
               removeTop: true,
               child: Container(
                 margin: EdgeInsets.fromLTRB(0, 0, 0, 0),
-                decoration: BoxDecoration(color: Colors.black),
                 child: ListView.separated(
                   separatorBuilder: (context, index) => Divider(color: Colors.grey),
                   itemCount: 20,
